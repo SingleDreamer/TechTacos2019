@@ -1,8 +1,13 @@
 import React from 'react';
 
 const HomePage = props => (
+
     <div>
-       
+
+    <h1>
+        This Is TechTacos
+      </h1>
+
         <form onSubmit = {props.getUsername}>
 		<h4>Login</h4>
 
@@ -21,4 +26,3 @@ const HomePage = props => (
 
 
 export default HomePage;
-

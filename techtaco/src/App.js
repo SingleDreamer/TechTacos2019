@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import HomePage from './components/HomePage.js'
 
 class App extends React.Component {
@@ -19,16 +22,24 @@ class App extends React.Component {
 
   render (){
     return(
-      <div>
-      <h1>
-        This Is TechTacos
-      </h1>
-      <HomePage getUsername={this.getUsername}/>
-    </div>
+
+      <div className="App">
+        <Router>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+          </Switch>
+        </Router>
+      </div>
+    //   <div>
+    //   <h1>
+    //     This Is TechTacos
+    //   </h1>
+    //   <HomePage getUsername={this.getUsername}/>
+    // </div>
     )
   }
 
-    
+
 }
 
 export default App;
