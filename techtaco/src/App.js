@@ -1,26 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import HomePage from './components/HomePage.js'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends React.Component {
+
+  state = {
+    name: undefined,
+  }
+
+  getUsername = async (e) => {
+    e.preventDefault();
+    const input_username = e.target.elements.name.value;
+    console.log(input_username);
+
+  }
+
+
+
+
+  render (){
+    return(
+      <div>
+      <h1>
+        This Is TechTacos
+      </h1>
+      <HomePage getUsername={this.getUsername}/>
     </div>
-  );
+    )
+  }
+
+    
 }
 
 export default App;
