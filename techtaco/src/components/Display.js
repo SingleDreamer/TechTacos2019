@@ -30,6 +30,16 @@ var sched = {
 
 class Display extends Component {
 
+componentDidMount(){
+
+  fetch('https://cors-anywhere.herokuapp.com/https://6tprkltz8e.execute-api.us-east-2.amazonaws.com/test/helloworld?name=John&city=Seattle')
+  .then(results => {
+    return results.json()
+  }).then(data =>
+    console.log(data))
+
+}
+
 
 render() {
 
