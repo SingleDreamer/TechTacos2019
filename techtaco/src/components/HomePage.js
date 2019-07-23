@@ -1,24 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link, hashHistory } from "react-router-dom";
 
-const HomePage = props => (
-    <div>
-       
-        <form onSubmit = {props.getUsername}>
-		<h4>Login</h4>
+const HomePage = () => (
+    <div className = "homepage_info">
+       <form>
+           {/* Login */}
+		    <h4>Login</h4>
+		    <input class="login-button" id='login_input' type="text" name="name" placeholder="ENTER USERNAME"/>
+                <Link to="/profiles">
+                    <button>Submit</button>
+                </Link>
 
-		<input id='login_input' type="text" name="name" placeholder="Username..."/>
-        <button>Submit</button>
-        </form>
-
-        <form>
-		<h4>Signup</h4>
-
-		{/* <input id='signup_input' type="text" name="new_name" placeholder="Enter A New Username..."/> */}
-        <button>Signup</button>
+            {/* Sign Up */}
+            <h2>Not registered yet?</h2>
+                <Link to="/signup">
+                    <button>Signup</button>
+                </Link>
         </form>
     </div>
   );
-
 
 export default HomePage;
 
