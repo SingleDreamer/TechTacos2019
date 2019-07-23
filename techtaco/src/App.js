@@ -2,9 +2,11 @@ import React from 'react';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import HomePage from './components/HomePage.js';
 
 import signUp from './components/signUp.js';
+import HomePage from './components/HomePage.js'
+import Display from './components/Display.js'
+
 
 class App extends React.Component {
 
@@ -28,7 +30,11 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Switch>
-            <Route exact path="/" component={signUp} />
+
+            <Route exact path="/SignUp" component={signUp} />
+            <Route exact path="/" component={HomePage} />
+            <Route exact path="/Display" component={Display} />
+
           </Switch>
         </Router>
       </div>
