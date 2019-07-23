@@ -1,64 +1,10 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 import HomePage from './components/HomePage.js'
 import Profiles from './components/Profiles.js'
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Display from './components/Display.js'
 
-
-// class App extends React.Component {
-
-//   state = {
-//     name: undefined,
-//   }
-
-//   getUsername = async (e) => {
-//     e.preventDefault();
-//     const input_username = e.target.elements.name.value;
-//     console.log(input_username);
-
-//   }
-
-
-
-
-//   render (){
-//     return(
-//     //   <div className="wrapper">
-//     //      <div className="main">
-//     //        <div className="col-xs-5 title-container">
-//     //         <h1>
-//     //           This Is TechTacos
-//     //         </h1>
-//     //        </div>
-          
-//     //     <HomePage />
-//     //   </div>
-//     // </div>
-
-//     <div>
-//         <div className="wrapper">
-//           <div className="main">
-//                 <div className="col-xs-5 title-container">
-//                   {/* <Titles /> */}
-//                   <h1>
-//                    Cohesion
-//                   </h1>
-//                 </div>
-//                 <div class="col-xs-7 form-container">
-//                 <HomePage/>
-
-//                 </div>
-
-//           </div>
-//         </div>
-//       </div>
-//     )
-//   }
-
-    
-// }
-
-// export default App;
 
 // renders HomePage component
 function Index() {
@@ -109,6 +55,7 @@ function AppRouter() {
         <Route path="/" exact component={Index} />
         <Route path="/signup/" component={SignUp} />
         <Route path="/profiles/" component={Users} />
+        <Route exact path="/Display" component={Display} />
       </div>
     </Router>
   );

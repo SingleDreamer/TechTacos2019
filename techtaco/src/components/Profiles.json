@@ -1,0 +1,169 @@
+[
+
+{
+ "Name": "Marcus Ashamole",
+ "Username": "m.ashamole",
+ "Contact Information" : [
+ {"cell": "7185437899", "email": "m.ashamole@gmail.com" }],
+ "Location": "NYC",
+ "Level": "Advanced",
+ "Schedule": [{
+ "Monday Morning": true,
+ "Monday Afternoon": false,
+ "Monday Evening": false,
+ "Tuesday Morning": false,
+ "Tuesday Afternoon": false,
+ "Tuesday Evening": false,
+ "Wednesday Morning": false,
+ "Wednesday Afternoon": false,
+ "Wednesday Evening": true,
+ "Thursday Morning": false,
+ "Thursday Afternoon": false,
+ "Thursday Evening": false,
+ "Friday Morning": false,
+ "Friday Afternoon": false,
+ "Friday Evening": true,
+ "Saturday Morning": false,
+ "Saturday Afternoon": false,
+ "Saturday Evening": true,
+ "Sunday Morning": false,
+ "Sunday Afternoon": false,
+ "Sunday Evening": false}],
+ "Workout Type":
+ ["Cardio", "Body Building"]
+},
+
+
+{
+ "Name": "Jessica Adjei",
+ "Username": "Jess.adjei",
+ "Contact Information" : [
+ {"cell": "7188887698", "email": "jess.adjei@gmail.com" }],
+ "Location": "NYC",
+ "Level": "Hardcore",
+ "Schedule": [{
+ "Monday Morning": false,
+ "Monday Afternoon": false,
+ "Monday Evening": true,
+ "Tuesday Morning": false,
+ "Tuesday Afternoon": false,
+ "Tuesday Evening": false,
+ "Wednesday Morning": false,
+ "Wednesday Afternoon": false,
+ "Wednesday Evening": true,
+ "Thursday Morning": false,
+ "Thursday Afternoon": false,
+ "Thursday Evening": true,
+ "Friday Morning": false,
+ "Friday Afternoon": false,
+ "Friday Evening": true,
+ "Saturday Morning": false,
+ "Saturday Afternoon": false,
+ "Saturday Evening": false,
+ "Sunday Morning": false,
+ "Sunday Afternoon": true,
+ "Sunday Evening": false}],
+ "Workout Type":
+ ["Cardio", "Body Building"]
+},
+
+
+{
+ "Name": "Jessica Ng",
+ "Username": "Ng.Jessica",
+ "Contact Information" : [
+ {"cell": "6465553890", "email": "Ng.Jessica@gmail.com" }],
+ "Location": "NYC",
+ "Level": "Intermediate",
+ "Schedule": [{
+ "Monday Morning": false,
+ "Monday Afternoon": false,
+ "Monday Evening": false,
+ "Tuesday Morning": true,
+ "Tuesday Afternoon": false,
+ "Tuesday Evening": false,
+ "Wednesday Morning": false,
+ "Wednesday Afternoon": false,
+ "Wednesday Evening": true,
+ "Thursday Morning": false,
+ "Thursday Afternoon": false,
+ "Thursday Evening": false,
+ "Friday Morning": false,
+ "Friday Afternoon": false,
+ "Friday Evening": true,
+ "Saturday Morning": false,
+ "Saturday Afternoon": false,
+ "Saturday Evening": false,
+ "Sunday Morning": true,
+ "Sunday Afternoon": false,
+ "Sunday Evening": false}],
+ "Workout Type":
+ ["Cardio", "Body Building"]
+},
+
+{
+ "Name": "Ishrat Chowdhury",
+ "Username": "Ish.Chowdhury1",
+ "Contact Information" : [
+ {"cell": "6460087789", "email": "Ish.Chowdhury1@gmail.com" }],
+ "Location": "NYC",
+ "Level": "Beginner",
+ "Schedule": [{
+ "Monday Morning": false,
+ "Monday Afternoon": false,
+ "Monday Evening": false,
+ "Tuesday Morning": true,
+ "Tuesday Afternoon": false,
+ "Tuesday Evening": false,
+ "Wednesday Morning": true,
+ "Wednesday Afternoon": false,
+ "Wednesday Evening": false,
+ "Thursday Morning": false,
+ "Thursday Afternoon": false,
+ "Thursday Evening": false,
+ "Friday Morning": false,
+ "Friday Afternoon": false,
+ "Friday Evening": false,
+ "Saturday Morning": false,
+ "Saturday Afternoon": false,
+ "Saturday Evening": false,
+ "Sunday Morning": true,
+ "Sunday Afternoon": false,
+ "Sunday Evening": false}],
+ "Workout Type":
+ ["Cardio"]
+},
+
+{
+ "Name": "Sunana Mazhar",
+ "Username": "s.mazhar",
+ "Contact Information" : [
+ {"cell": "2134445689", "email": "s.mazhar@gmail.com" }],
+ "Location": "NYC",
+ "Level": "Beginner",
+ "Schedule": [{
+ "Monday Morning": false,
+ "Monday Afternoon": false,
+ "Monday Evening": true,
+ "Tuesday Morning": false,
+ "Tuesday Afternoon": false,
+ "Tuesday Evening": false,
+ "Wednesday Morning": false,
+ "Wednesday Afternoon": false,
+ "Wednesday Evening": true,
+ "Thursday Morning": false,
+ "Thursday Afternoon": false,
+ "Thursday Evening": false,
+ "Friday Morning": false,
+ "Friday Afternoon": false,
+ "Friday Evening": false,
+ "Saturday Morning": false,
+ "Saturday Afternoon": false,
+ "Saturday Evening": false,
+ "Sunday Morning": true,
+ "Sunday Afternoon": false,
+ "Sunday Evening": false}],
+ "Workout Type":
+ ["Cardio", "Weight Loss"]
+}
+]
