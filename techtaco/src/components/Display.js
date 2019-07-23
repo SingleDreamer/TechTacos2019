@@ -40,12 +40,7 @@ componentDidMount(){
 
 }
 
-
 render() {
-
-
-
-
   return(
     <div>
     <h1>Records</h1>

@@ -80,7 +80,7 @@ input:-webkit-autofill {
     -webkit-text-fill-color: #fff !important;
 }
 
-button {
+.home_btns {
   border: 0;
   padding: 8px 20px;
   margin: 0 2px;
@@ -94,7 +94,7 @@ button {
   font-weight: 100;
 }
 
-button:active {
+.home_btns:active {
   outline: none;
 }
 
