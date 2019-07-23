@@ -14,6 +14,7 @@ class Display extends Component {
       this.state = {
         data: null,
         profiles: Profiles,
+        // sample schedule to reference the keys
         schedule: {
           "Monday Morning": true,
           "Monday Afternoon": false,
@@ -72,7 +73,11 @@ render() {
         <th>Location</th>
         <th>Email</th>
         <th>Cell</th>
-
+        {Object.keys(this.state.schedule).map((item, i) => {
+            return(
+                <th>{item}</th>
+            )
+        })}
       </tr>
       </thead>
         <tbody>
@@ -83,9 +88,19 @@ render() {
       <td>{profile["Location"]["S"]}</td>
       <td>{profile["Contact Information"]["L"][0]["M"].email["S"]}</td>
       <td>{profile["Contact Information"]["L"][0]["M"].cell["S"]}</td>
+
+      {Object.keys(this.state.schedule).map((item, i) => {
+          return(
+              <th>{profile["Schedule"]["L"][0]["M"][item]["BOOL"]? <td bgcolor="#FF0000"></td> : <td bgcolor="#00FF00"></td> }</th>
+          )
+      })}
+
+
     </tr>)
 
     })}
+
+
     </tbody>
     </Table>
     {this.state.data}
