@@ -84,6 +84,7 @@ class buildProfile extends React.Component {
       // alert('Your favorite flavor is: ' + this.state.value);
       //alert("" + this.state.location + " " + this.state.level + " " + this.state.schedule["Monday Morning"]);
       // alert(JSON.stringify(this.state.profile));
+
       this.setState({name: event.target.name.name});
       console.log(event.target.name);
       console.log(JSON.stringify(this.state))
@@ -157,11 +158,11 @@ class buildProfile extends React.Component {
           </p>
           <p>
             Name:
-              <input onChange={this.handleChange} id='login_input' type="text" name="name" placeholder="Name"/>
+              <input onChange={this.handleChange} id='login_input' type="text" name="Name" placeholder="Name"/>
           </p>
           <p>
             Username:
-              <input onChange={this.handleChange} id='login_input' type="text" name="username" placeholder="Username"/>
+              <input onChange={this.handleChange} id='login_input' type="text" name="Username" placeholder="Username"/>
           </p>
 
           <p>
