@@ -1,14 +1,33 @@
 import React from 'react';
 
-const HomePage = props => (
 
+
+class HomePage extends React.Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {};
+
+      this.getUsername = this.getUsername.bind(this);
+    }
+
+  getUsername = async (e) => {
+    e.preventDefault();
+    const input_username = e.target.elements.name.value;
+    console.log(input_username);
+
+  }
+
+render () {
+//const HomePage = props => (
+return (
     <div>
 
     <h1>
         This Is TechTacos
       </h1>
 
-        <form onSubmit = {props.getUsername}>
+        <form onSubmit = {this.getUsername}>
 		<h4>Login</h4>
 
 		<input id='login_input' type="text" name="name" placeholder="Username..."/>
@@ -22,7 +41,10 @@ const HomePage = props => (
         <button>Signup</button>
         </form>
     </div>
-  );
+  // );
+)}
 
+
+}
 
 export default HomePage;
