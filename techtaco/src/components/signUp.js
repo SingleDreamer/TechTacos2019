@@ -3,6 +3,7 @@ import React from 'react';
 // import DropdownItem from 'react-bootstrap/DropdownItem';
 // import DropdownMenu from 'react-bootstrap/DropdownMenu';
 import image from '../image.jpg';
+import { withRouter } from 'react-router';
 
 class buildProfile extends React.Component {
 
@@ -87,7 +88,7 @@ class buildProfile extends React.Component {
 
       this.setState({name: event.target.name.name});
       console.log(event.target.name);
-      console.log(JSON.stringify(this.state))
+      // console.log(JSON.stringify(this.state))
 //       console.log(JSON.stringify({
 // "Name": "Johnna Chowdhury",
 // "Username": "Ish.Chowdhury1",
@@ -139,11 +140,16 @@ class buildProfile extends React.Component {
       .then(results => {
         return results.json()
       }).then(data =>
-        console.log(data));
+        // localStorage.setItem('data',
+        // JSON.stringify(data))).then(
+          this.props.history.push({pathname:'/matches',state:data})
+        );
+        // console.log(data));
         // this.setState({ data: data.message }));
         // this.setState({ profiles: data.message.Items }));
 
       event.preventDefault();
+
     }
 
   render() {
@@ -230,4 +236,4 @@ class buildProfile extends React.Component {
   }
 }
 
-export default buildProfile;
+export default withRouter(buildProfile);

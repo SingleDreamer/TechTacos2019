@@ -6,14 +6,28 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class DisplayProfiles extends React.Component {
 
+  constructor(props) {
+      super(props);
+      this.state = {
+        profiles : Profiles
+      };
+
+    }
+
     componentDidMount(){
 
-      fetch('https://cors-anywhere.herokuapp.com/https://6tprkltz8e.execute-api.us-east-2.amazonaws.com/test/helloworld?name=John&city=Seattle')
-      .then(results => {
-        return results.json()
-      }).then(data =>
-        console.log(data))
-
+      // fetch('https://cors-anywhere.herokuapp.com/https://6tprkltz8e.execute-api.us-east-2.amazonaws.com/test/helloworld?name=John&city=Seattle')
+      // .then(results => {
+      //   return results.json()
+      // }).then(data =>
+      //   console.log(data))
+      //
+      // let data = '';
+      // if (localStorage && localStorage.getItem('data')) {
+      //    data = JSON.parse(localStorage.getItem('data'));
+      //   }
+      // console.log("data",data.body.Items);
+      // this.setState({profiles: data.body.Items});
     }
 
     render() {
@@ -22,7 +36,7 @@ class DisplayProfiles extends React.Component {
         <div className="profile_body">
 
         <h1>This Is The Profiles Page</h1>
-        {Profiles.map((profile, index) => {
+        {this.state.profiles.map((profile, index) => {
         return(
             <div>
                     <div class="card-container">

@@ -8,6 +8,7 @@ import signUp from './components/signUp.js';
 import HomePage from './components/HomePage.js'
 import Display from './components/Display.js'
 import DisplayProfiles from './components/Profiles.js'
+import Matches from './components/Matches.js'
 
 class App extends React.Component {
 
@@ -30,6 +31,7 @@ class App extends React.Component {
             <Route exact path="/" component={HomePage} />
             <Route exact path="/Display" component={Display} />
             <Route exact path="/Profiles" component={DisplayProfiles} />
+            <Route exact path="/Matches" component={Matches} />
 
           </Switch>
         </Router>
