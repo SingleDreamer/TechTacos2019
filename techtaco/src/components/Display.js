@@ -60,49 +60,39 @@ render() {
     <div>
     <h1>Records</h1>
 
-
+    
     <Table responsive striped bordered hover >
-      <thead>
-      <tr>
-        <th>Name</th>
-        <th>Location</th>
-        <th>Email</th>
-        <th>Cell</th>
-        {Object.keys(this.state.schedule).map((item, i) => {
-            return(
-                <th>{item}</th>
-            )
-        })}
-      </tr>
-      </thead>
-        <tbody>
     {this.state.profiles.map((profile, index) => {
         return(
-    <tr key={index}>
-      <td>{profile["Name"]["S"]}</td>
-      <td>{profile["Location"]["S"]}</td>
-      <td>{profile["Contact Information"]["L"][0]["M"].email["S"]}</td>
-      <td>{profile["Contact Information"]["L"][0]["M"].cell["S"]}</td>
-
-      {Object.keys(this.state.schedule).map((item, i) => {
-          return(
-              <th>{profile["Schedule"]["L"][0]["M"][item]["BOOL"]? <td bgcolor="#FF0000"></td> : <td bgcolor="#00FF00"></td> }</th>
-          )
+          <div class="card-container">
+    <p>{profile["Name"]["S"]}</p>
+    <p>{profile["Location"]["S"]}</p>
+    <p>{profile["Contact Information"]["L"][0]["M"].email["S"]}</p>
+    <p>{profile["Contact Information"]["L"][0]["M"].cell["S"]}</p>
+    <Table responsive striped bordered hover >
+    <thead>
+    {Object.keys(this.state.schedule).map((item, i) => {
+      if(profile["Schedule"]["L"][0]["M"][item]["BOOL"]){
+        return(
+          <th>{item}</th>
+        )
+        
+      }
+        
       })}
+      </thead>
+      </Table>
 
-
-    </tr>)
+    </div>)
 
     })}
 
-
-    </tbody>
+    {/* </tbody> */}
     </Table>
     {this.state.data}
     {this.state.schedule["Monday Morning"]?"true":"false"}
 
     </div>
-
 
   )
 
