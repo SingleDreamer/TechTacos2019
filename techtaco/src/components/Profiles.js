@@ -2,23 +2,23 @@ import React from 'react';
 import ProfileStyles from './ProfileStyles.css'
 import Profiles from './Profiles.json'
 
-class Display extends React.Component {
+class DisplayProfiles extends React.Component {
 
     componentDidMount(){
-    
+
       fetch('https://cors-anywhere.herokuapp.com/https://6tprkltz8e.execute-api.us-east-2.amazonaws.com/test/helloworld?name=John&city=Seattle')
       .then(results => {
         return results.json()
       }).then(data =>
         console.log(data))
-    
+
     }
-    
+
     render() {
       return(
 
         <div className="profile_body">
-        
+
         <h1>This Is The Profiles Page</h1>
         {Profiles.map((profile, index) => {
         return(
@@ -53,7 +53,7 @@ class Display extends React.Component {
                             <li>{inner}</li>
                         ))}
                         </ul>
-                            
+
                         </div>
                         {/* {profile["Contact Information"].map(days => (
                             <p>{days}</p>
@@ -62,11 +62,11 @@ class Display extends React.Component {
                          {profile["Schedule"].map(function(day, time){
                             return <p>Schedule</p>
                          }
-                             
+
                          )}
                     </div>
-            
-                    
+
+
                 </div>
         )
 
@@ -75,7 +75,7 @@ class Display extends React.Component {
       )
     }
 }
-    export default Display;
+    export default DisplayProfiles;
 
 // const Profiles = () => (
 
@@ -116,7 +116,7 @@ class Display extends React.Component {
 //             </div>
 //         </div>
 
-        
+
 //     </div>
 //   );
 
