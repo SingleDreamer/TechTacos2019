@@ -54,12 +54,7 @@ class Display extends Component {
 
   }
 
-
-
-
 render() {
-
-
   return(
     <div>
     <h1>Records</h1>
