@@ -1,9 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import './App.css';
 import HomePage from './components/HomePage.js'
 import Profiles from './components/Profiles.js'
 import Display from './components/Display.js'
+import signUp from './components/signUp.js';
+
 
 
 // renders HomePage component
@@ -24,7 +27,7 @@ function Index() {
 }
 
 function SignUp() {
-  return <h2>SignUp</h2>;
+  return <signUp />;
 }
 
 function Users() {
@@ -52,6 +55,8 @@ function AppRouter() {
         </nav> */}
         {/* this is for the nav bar */}
 
+
+      <div className="App">
         <Route path="/" exact component={Index} />
         <Route path="/signup" component={SignUp} />
         <Route path="/profiles" component={Users} />
