@@ -20,6 +20,13 @@ class HomePage extends React.Component {
 render () {
 //const HomePage = props => (
 return (
+  <div className="wrapper">
+            <div className="main">
+              <div className="col-xs-5 title-container">
+                {/* <Titles /> */}
+                  <h1>Cohesion</h1>
+              </div>
+              <div class="col-xs-7 form-container">
   <div className = "homepage_info">
     <form>
         {/* Login */}
@@ -36,6 +43,9 @@ return (
              </Link>
   </form>
   </div>
+  </div>
+          </div>
+        </div>
 )}
 
 
