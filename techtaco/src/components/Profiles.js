@@ -1,6 +1,8 @@
 import React from 'react';
 import ProfileStyles from './ProfileStyles.css'
 import Profiles from './Profiles.json'
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
 
 class DisplayProfiles extends React.Component {
 
@@ -41,9 +43,11 @@ class DisplayProfiles extends React.Component {
                             <button class="primary">
                                 Message
                             </button>
-                            <button class="primary ghost">
-                                View Profile
-                            </button>
+                            <Link to="/display">
+                                <button class="primary ghost">
+                                    View Profile
+                                </button>
+                            </Link>
                         </div>
                         <div class="skills">
                         <h6>Workout Type</h6>
@@ -55,15 +59,7 @@ class DisplayProfiles extends React.Component {
                         </ul>
 
                         </div>
-                        {/* {profile["Contact Information"].map(days => (
-                            <p>{days}</p>
 
-                        ))} */}
-                         {profile["Schedule"].map(function(day, time){
-                            return <p>Schedule</p>
-                         }
-
-                         )}
                     </div>
 
 
