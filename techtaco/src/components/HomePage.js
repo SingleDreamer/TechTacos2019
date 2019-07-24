@@ -1,6 +1,5 @@
 import React from 'react';
-
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class HomePage extends React.Component {
 
@@ -21,27 +20,22 @@ class HomePage extends React.Component {
 render () {
 //const HomePage = props => (
 return (
-    <div>
+  <div className = "homepage_info">
+    <form>
+        {/* Login */}
+     <h4>Login</h4>
+     <input class="login-button" id='login_input' type="text" name="name" placeholder="ENTER USERNAME"/>
+             <Link to="/profiles">
+                 <button className="home_btns">Submit</button>
+             </Link>
 
-    <h1>
-        This Is TechTacos
-      </h1>
-
-        <form onSubmit = {this.getUsername}>
-		<h4>Login</h4>
-
-		<input id='login_input' type="text" name="name" placeholder="Username..."/>
-        <button>Submit</button>
-        </form>
-
-        <form>
-		<h4>Signup</h4>
-
-		{/* <input id='signup_input' type="text" name="new_name" placeholder="Enter A New Username..."/> */}
-        <button>Signup</button>
-        </form>
-    </div>
-  // );
+         {/* Sign Up */}
+         <h2>Not registered yet?</h2>
+             <Link to="/signup">
+                 <button className="home_btns">Signup</button>
+             </Link>
+  </form>
+  </div>
 )}
 
 
