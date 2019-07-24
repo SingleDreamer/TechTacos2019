@@ -53,8 +53,8 @@ function AppRouter() {
         {/* this is for the nav bar */}
 
         <Route path="/" exact component={Index} />
-        <Route path="/signup/" component={SignUp} />
-        <Route path="/profiles/" component={Users} />
+        <Route path="/signup" component={SignUp} />
+        <Route path="/profiles" component={Users} />
         <Route exact path="/Display" component={Display} />
       </div>
     </Router>

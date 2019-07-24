@@ -17,23 +17,23 @@ class Display extends React.Component {
     render() {
       return(
 
-        <div>
+        <div className="profile_body">
         
         <h1>This Is The Profiles Page</h1>
         {Profiles.map((profile, index) => {
         return(
             <div>
                     <div class="card-container">
-                     <span class="pro">PRO</span>
+                     <span class="pro">70%</span>
                          <img
                             class="round"
-                            src="https://randomuser.me/api/portraits/women/79.jpg"
+                            // src="https://randomuser.me/api/portraits/women/79.jpg"
+                            src={profile.Pic}
                             alt="user"
                         />
                         <h3>{profile.Name}</h3>
                         <h6>{profile.Location}</h6>
                         <h6>Level : {profile.Level}</h6>
-                        <h6>{profile["Workout Type"][0]}</h6>
                         <p>
                         {profile["Contact Information"][0].email}
                         </p>
@@ -46,20 +46,24 @@ class Display extends React.Component {
                             </button>
                         </div>
                         <div class="skills">
-                        {profile["Workout Type"].map((type, index) => {
-                                <p>This is a type</p>
-                         })}
-                            <h6>Skills</h6>
-                            <ul>
-                                <li>UI / UX</li>
-                                <li>Front End Development</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JavaScript</li>
-                                <li>React</li>
-                                <li>Node</li>
-                            </ul>
+                        <h6>Workout Type</h6>
+
+                        <ul>
+                        {profile["Workout Type"].map(inner => (
+                            <li>{inner}</li>
+                        ))}
+                        </ul>
+                            
                         </div>
+                        {/* {profile["Contact Information"].map(days => (
+                            <p>{days}</p>
+
+                        ))} */}
+                         {profile["Schedule"].map(function(day, time){
+                            return <p>Schedule</p>
+                         }
+                             
+                         )}
                     </div>
             
                     
