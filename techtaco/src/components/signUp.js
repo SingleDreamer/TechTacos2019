@@ -11,13 +11,13 @@ class buildProfile extends React.Component {
 
       this.state = {
         // sample schedule to reference the keys
-        name: null,
-        username: null,
-        contact : [
-        {cell: null, email: null }],
-        location: "New York,New York",
-        level: "Casual",
-        schedule: {
+        "Name": "na",
+        "Username": "na",
+        "Contact Information" : [
+        {"cell": "na", "email": "na" }],
+        "Location": "New York,New York",
+        "Level": "Casual",
+        "Schedule": [{
           "Monday Morning": false,
           "Monday Afternoon": false,
           "Monday Evening": false,
@@ -38,8 +38,8 @@ class buildProfile extends React.Component {
           "Saturday Evening": false,
           "Sunday Morning": false,
           "Sunday Afternoon": false,
-          "Sunday Evening": false
-        }
+          "Sunday Evening": false}],
+        "Workout Type":["Cardio"]
       };
 
       this.handleChange = this.handleChange.bind(this);
@@ -58,7 +58,7 @@ class buildProfile extends React.Component {
     }
 
     handleChangeSchedule(event) {
-      let change = this.state.schedule;
+      let change = this.state.Schedule[0];
       if (event.target.value == "true") {
         change[event.target.name] = true;
       } else {
@@ -72,7 +72,7 @@ class buildProfile extends React.Component {
     }
 
     handleChangeContact(event) {
-      let change = this.state.contact[0];
+      let change = this.state["Contact Information"][0];
       change[event.target.name] = event.target.value;
       console.log(change);
       this.setState(change);
@@ -82,10 +82,66 @@ class buildProfile extends React.Component {
 
     handleSubmit(event) {
       // alert('Your favorite flavor is: ' + this.state.value);
-      alert("" + this.state.location + " " + this.state.level + " " + this.state.schedule["Monday Morning"]);
+      //alert("" + this.state.location + " " + this.state.level + " " + this.state.schedule["Monday Morning"]);
+      // alert(JSON.stringify(this.state.profile));
       this.setState({name: event.target.name.name});
       console.log(event.target.name);
-      console.log(this.state);
+      console.log(JSON.stringify(this.state))
+//       console.log(JSON.stringify({
+// "Name": "Johnna Chowdhury",
+// "Username": "Ish.Chowdhury1",
+// "Contact Information" : [
+// {"cell": "6460087789", "email": "Ish.Chowdhury1@gmail.com" }],
+// "Location": "NYC",
+// "Level": "Beginner",
+// "Schedule": [{
+// "Monday Morning": true,
+// "Monday Afternoon": true,
+// "Monday Evening": true,
+// "Tuesday Morning": true,
+// "Tuesday Afternoon": false,
+// "Tuesday Evening": false,
+// "Wednesday Morning": true,
+// "Wednesday Afternoon": false,
+// "Wednesday Evening": false,
+// "Thursday Morning": false,
+// "Thursday Afternoon": false,
+// "Thursday Evening": false,
+// "Friday Morning": false,
+// "Friday Afternoon": true,
+// "Friday Evening": false,
+// "Saturday Morning": false,
+// "Saturday Afternoon": false,
+// "Saturday Evening": false,
+// "Sunday Morning": true,
+// "Sunday Afternoon": false,
+// "Sunday Evening": false}],
+// "Workout Type":
+// ["Cardio"]
+// }));
+
+      fetch('https://cors-anywhere.herokuapp.com/https://93tqqyb2qd.execute-api.us-east-2.amazonaws.com/test1/write/',
+      {
+        method:"POST",
+        mode: 'cors',
+        headers: {
+            'Origin':'fitnessapp.com',
+            'Content-Type': 'application/json',
+            // "Access-Control-Request-Method": "POST"
+            // "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+            // "Access-Control-Allow-Credentials" : true // Required for cookies, authorization headers with HTTPS
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify(this.state),
+      }
+      )
+      .then(results => {
+        return results.json()
+      }).then(data =>
+        console.log(data));
+        // this.setState({ data: data.message }));
+        // this.setState({ profiles: data.message.Items }));
+
       event.preventDefault();
     }
 
@@ -121,7 +177,7 @@ class buildProfile extends React.Component {
 
             <label>
               Location:
-              <select name="location" value={this.state.location} onChange={this.handleChange}>
+              <select name="location" value={this.state.Location} onChange={this.handleChange}>
                 <option value="New York,New York">New York,New York</option>
                 <option value="Austin,Texas">Austin,Texas</option>
                 <option value="Florham Park,New Jersey">Florham Park,New Jersey</option>
@@ -138,7 +194,7 @@ class buildProfile extends React.Component {
           <label>
             <p>How would you describe yourself?</p>
             Workout Level:
-            <select name="level" value={this.state.level} onChange={this.handleChange}>
+            <select name="level" value={this.state.Level} onChange={this.handleChange}>
               <option value="Casual">Casual</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Hard-core">Hard-core</option>
@@ -151,11 +207,11 @@ class buildProfile extends React.Component {
           <p>
           <label>
           <p>Schedule</p>
-          {Object.keys(this.state.schedule).map((item, i) => {
+          {Object.keys(this.state.Schedule[0]).map((item, i) => {
               return(
                 <div>
                 {item}
-                <select name={item} value={this.state.schedule[{item}]} onChange={this.handleChangeSchedule}>
+                <select name={item} value={this.state.Schedule[0][{item}]} onChange={this.handleChangeSchedule}>
                   <option value="false">False</option>
                   <option value="true">True</option>
                 </select>
