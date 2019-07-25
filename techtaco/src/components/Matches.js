@@ -65,11 +65,11 @@ render() {
 
     <div className="profile_body">
       <Link to="/">
-        <button class="primary ghost">
+        <button class="primary ghost home">
             Home
         </button>
     </Link>
-    <h1>Matches</h1>
+    {/* <h1>Matches</h1> */}
 
 
     <Table responsive striped bordered hover >
@@ -98,13 +98,13 @@ render() {
       </div>
       <div class="skills">
         <h6>Workout Type</h6>
-        {/* <ul> */}
+        <ul>
           {profile["Workout Type"]["L"].map(inner => (
               <li>{inner.S}</li>
           ))}
-          {/* </ul> */}
+          </ul>
           </div>
-          <div class="skills">
+          <div class="schedule">
         <h6>Availability</h6>
 
 
@@ -113,7 +113,7 @@ render() {
     {Object.keys(this.state.schedule).map((item, i) => {
       if(profile["Schedule"]["L"][0]["M"][item]["BOOL"]){
         return(
-          <li>{item}</li>
+          <li class="sched">{item}</li>
         )
 
       }
