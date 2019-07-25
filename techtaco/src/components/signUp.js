@@ -200,7 +200,7 @@ class buildProfile extends React.Component {
 
             <label>
               Location:
-              <select name="location" value={this.state.Location} onChange={this.handleChange}>
+              <select name="Location" value={this.state.Location} onChange={this.handleChange}>
                 <option value="New York,New York">New York,New York</option>
                 <option value="Austin,Texas">Austin,Texas</option>
                 <option value="Florham Park,New Jersey">Florham Park,New Jersey</option>
@@ -217,7 +217,7 @@ class buildProfile extends React.Component {
           <label>
             <p>How would you describe yourself?</p>
             Workout Level:
-            <select name="level" value={this.state.Level} onChange={this.handleChange}>
+            <select name="Level" value={this.state.Level} onChange={this.handleChange}>
               <option value="Casual">Casual</option>
               <option value="Intermediate">Intermediate</option>
               <option value="Hard-core">Hard-core</option>
