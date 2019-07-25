@@ -3,6 +3,8 @@ import ProfileStyles from './ProfileStyles.css'
 import Profiles from './Profiles.json'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+// NOT USED; JUST FOR FORMATTING / CSS
+
 
 class DisplayProfiles extends React.Component {
 
