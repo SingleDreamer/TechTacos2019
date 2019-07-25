@@ -12,7 +12,8 @@ class HomePage extends React.Component {
 
   getUsername = async (e) => {
     e.preventDefault();
-    const input_username = e.target.elements.name.value;
+    // const input_username = e.target.elements.name.value;
+    const input_username = e.target.value;
     console.log(input_username);
 
   }
@@ -27,23 +28,25 @@ return (
                   <h1>Cohesion</h1>
               </div>
               <div class="col-xs-7 form-container">
-  <div className = "homepage_info">
-    <form>
-        {/* Login */}
-     <h4>Login</h4>
-     <input class="login-button" id='login_input' type="text" name="name" placeholder="ENTER USERNAME"/>
-             <Link to="/profiles">
-                 <button className="home_btns">Submit</button>
-             </Link>
+          <div className = "homepage_info">
+            <form>
+                {/* Login */}
+             <h4>Login</h4>
+             <input onChange={this.getUsername} class="login-button" id='login_input' type="text" name="name" placeholder="ENTER USERNAME"/>
+              <button className="home_btns" type="submit" value="Submit" >Submit</button>
 
-         {/* Sign Up */}
-         <h2>Not registered yet?</h2>
-             <Link to="/signup">
-                 <button className="home_btns">Signup</button>
-             </Link>
-  </form>
-  </div>
-  </div>
+
+
+                 {/* Sign Up */}
+                 <h2>Not registered yet?</h2>
+                     <Link to="/signup">
+                         <button className="home_btns">Signup</button>
+                     </Link>
+
+
+          </form>
+          </div>
+          </div>
           </div>
         </div>
 )}
