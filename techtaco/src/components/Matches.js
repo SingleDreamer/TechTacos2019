@@ -62,7 +62,13 @@ class Matches extends Component {
 
 render() {
   return(
-    <div>
+    
+    <div className="profile_body">
+      <Link to="/">
+        <button class="primary ghost">
+            Home
+        </button>
+    </Link>
     <h1>Matches</h1>
 
 
@@ -70,36 +76,60 @@ render() {
     {this.state.profiles.map((profile, index) => {
         return(
           <div class="card-container">
-    <p>{profile["Name"]["S"]}</p>
-    <p>{profile["Location"]["S"]}</p>
+             <span class="pro">MATCH!</span>
+             <img
+                class="round"
+                src="https://randomuser.me/api/portraits/women/79.jpg"
+                  alt="user"
+                />
+    <h3>{profile["Name"]["S"]}</h3>
+    <h6>{profile["Location"]["S"]}</h6>
+    <h6>Level : {profile["Level"]["S"]}</h6>
     <p>{profile["Contact Information"]["L"][0]["M"].email["S"]}</p>
-    <p>{profile["Contact Information"]["L"][0]["M"].cell["S"]}</p>
-    <Table responsive striped bordered hover >
-    <thead>
+    <div class="buttons">
+        <button class="primary">
+          Message
+          </button>
+          <Link to="/display">
+            <button class="primary ghost">
+                View Profile
+                  </button>
+            </Link>
+      </div>
+      <div class="skills">
+        <h6>Workout Type</h6>
+        {/* <ul> */}
+          {/* {profile["Workout Type"].map(inner => (
+              <li>{inner}</li>
+          ))} */}
+          {/* </ul> */}
+          </div>
+          <div class="skills">
+        <h6>Availability</h6>
+
+          
+    {/* <p>{profile["Contact Information"]["L"][0]["M"].cell["S"]}</p> */}
+    <ul>
     {Object.keys(this.state.schedule).map((item, i) => {
       if(profile["Schedule"]["L"][0]["M"][item]["BOOL"]){
         return(
-          <th>{item}</th>
+          <li>{item}</li>
         )
 
       }
 
       })}
-      </thead>
-      </Table>
+      </ul>
+ 
+      </div>
 
     </div>)
 
     })}
 
-    {/* </tbody> */}
     </Table>
 
-    <Link to="/">
-        <button class="primary ghost">
-            Home
-        </button>
-    </Link>
+    
     </div>
 
   )
