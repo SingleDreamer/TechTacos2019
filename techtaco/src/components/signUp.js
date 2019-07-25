@@ -47,6 +47,8 @@ class buildProfile extends React.Component {
       this.handleSubmit = this.handleSubmit.bind(this);
       this.handleChangeSchedule = this.handleChangeSchedule.bind(this);
       this.handleChangeContact = this.handleChangeContact.bind(this);
+      this.handleChangeWorkout = this.handleChangeWorkout.bind(this);
+
     }
 
     handleChange(event) {
@@ -54,6 +56,15 @@ class buildProfile extends React.Component {
       change[event.target.name] = event.target.value;
       console.log(change);
       this.setState(change);
+      console.log(this.state);
+
+    }
+
+    handleChangeWorkout(event) {
+      let change = [];
+      change = event.target.value.split(",");
+      console.log(change);
+      this.setState({"Workout Type" : change});
       console.log(this.state);
 
     }
@@ -179,6 +190,11 @@ class buildProfile extends React.Component {
           <p>
             Cell:
               <input onChange={this.handleChangeContact} id='login_input' type="text" name="cell" placeholder="cell"/>
+          </p>
+
+          <p>
+            Workout Type(s):
+              <input onChange={this.handleChangeWorkout} id='login_input' type="text" name="workout" placeholder="Cardio, Yoga, etc"/>
           </p>
           <p>
 
