@@ -2,7 +2,7 @@ import React from 'react';
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import DropdownItem from 'react-bootstrap/DropdownItem';
 // import DropdownMenu from 'react-bootstrap/DropdownMenu';
-import image from '../image.jpg';
+import image from '../1.png';
 import { withRouter } from 'react-router';
 
 class buildProfile extends React.Component {
@@ -156,81 +156,64 @@ class buildProfile extends React.Component {
     return (
       <div className="buildProfile">
         <h1>
-          Profile
+          Sign Up
         </h1>
-        <form onSubmit={this.handleSubmit}>
-          <p>
-            <img src={image} width="100" height="100" alt="picture"/>
-          </p>
-          <p>
-            Name:
-              <input onChange={this.handleChange} id='login_input' type="text" name="Name" placeholder="Name"/>
-          </p>
-          <p>
-            Username:
-              <input onChange={this.handleChange} id='login_input' type="text" name="Username" placeholder="Username"/>
-          </p>
-
-          <p>
-            Email:
-              <input onChange={this.handleChangeContact} id='login_input' type="text" name="email" placeholder="email"/>
-          </p>
-
-          <p>
-            Cell:
-              <input onChange={this.handleChangeContact} id='login_input' type="text" name="cell" placeholder="cell"/>
-          </p>
-          <p>
-
-            <label>
-              Location:
-              <select name="location" value={this.state.Location} onChange={this.handleChange}>
-                <option value="New York,New York">New York,New York</option>
-                <option value="Austin,Texas">Austin,Texas</option>
-                <option value="Florham Park,New Jersey">Florham Park,New Jersey</option>
-              </select>
-            </label>
-
-
-
-
-          </p>
-
-          <p>
-
-          <label>
-            <p>How would you describe yourself?</p>
-            Workout Level:
-            <select name="level" value={this.state.Level} onChange={this.handleChange}>
-              <option value="Casual">Casual</option>
-              <option value="Intermediate">Intermediate</option>
-              <option value="Hard-core">Hard-core</option>
-            </select>
-          </label>
-
-
-          </p>
-
-          <p>
-          <label>
-          <p>Schedule</p>
-          {Object.keys(this.state.Schedule[0]).map((item, i) => {
-              return(
-                <div>
-                {item}
-                <select name={item} value={this.state.Schedule[0][{item}]} onChange={this.handleChangeSchedule}>
-                  <option value="false">False</option>
-                  <option value="true">True</option>
+        <p>
+          <img src={image} width="150" height="150" border= "3px black" alt="picture"/>
+        </p>
+        <h2>
+          <form onSubmit={this.handleSubmit}>
+            <p id="input" >
+              Name:
+                <input onChange={this.handleChange} id='login_input' type="text" name="Name" placeholder="Name"/>
+              Username:
+                <input onChange={this.handleChange} id='login_input' type="text" name="Username" placeholder="Username"/>
+              Email:
+                <input onChange={this.handleChangeContact} id='login_input' type="text" name="email" placeholder="email"/>
+              Cell:
+                <input onChange={this.handleChangeContact} id='login_input' type="text" name="cell" placeholder="cell"/>
+            </p>
+            <p>
+              <label  className="dropdown">
+                Location:
+                <select name="location" value={this.state.Location} onChange={this.handleChange}>
+                  <option value="New York,New York">New York, New York</option>
+                  <option value="Austin,Texas">Austin, Texas</option>
+                  <option value="Florham Park,New Jersey">Florham Park, New Jersey</option>
                 </select>
-                </div>
-              )
-          })}
-          </label>
-          </p>
+              </label>
+            </p>
+            <p>
+              <label id="input">
+                <p >How would you describe yourself?</p>
+                Workout Level:
+                <select name="level" value={this.state.Level} onChange={this.handleChange}>
+                  <option value="Casual">Casual</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Hard-core">Hard-core</option>
+                </select>
+              </label>
+            </p>
 
-          <input type="submit" value="Submit" />
-
-        </form>
+            <p>
+              <label>
+              <p>Schedule</p>
+              {Object.keys(this.state.Schedule[0]).map((item, i) => {
+                  return(
+                    <div>
+                    {item}
+                    <select name={item} value={this.state.Schedule[0][{item}]} onChange={this.handleChangeSchedule}>
+                      <option value="false">False</option>
+                      <option value="true">True</option>
+                    </select>
+                    </div>
+                  )
+              })}
+              </label>
+            </p>
+            <input className="button" value="Submit" id="input"/>
+          </form>
+        </h2>
       </div>
     );
   }
