@@ -2,7 +2,7 @@ import React from 'react';
 // import Dropdown from 'react-bootstrap/Dropdown';
 // import DropdownItem from 'react-bootstrap/DropdownItem';
 // import DropdownMenu from 'react-bootstrap/DropdownMenu';
-import image from '../image.jpg';
+import image from '../1.png';
 import { withRouter } from 'react-router';
 
 class buildProfile extends React.Component {
@@ -167,37 +167,28 @@ class buildProfile extends React.Component {
     return (
       <div className="buildProfile">
         <h1>
-          Profile
+          Sign Up
         </h1>
         <form onSubmit={this.handleSubmit}>
-          <p>
-            <img src={image} width="100" height="100" alt="picture"/>
+          <p id="img">
+            <img src={image} width="150" height="150" alt="picture"/>
           </p>
           <p>
             Name:
               <input onChange={this.handleChange} id='login_input' type="text" name="Name" placeholder="Name"/>
-          </p>
-          <p>
             Username:
               <input onChange={this.handleChange} id='login_input' type="text" name="Username" placeholder="Username"/>
-          </p>
-
-          <p>
             Email:
               <input onChange={this.handleChangeContact} id='login_input' type="text" name="email" placeholder="email"/>
-          </p>
-
-          <p>
             Cell:
               <input onChange={this.handleChangeContact} id='login_input' type="text" name="cell" placeholder="cell"/>
           </p>
 
-          <p>
+          <p id="input">
             Workout Type(s):
               <input onChange={this.handleChangeWorkout} id='login_input' type="text" name="workout" placeholder="Cardio, Yoga, etc"/>
           </p>
-          <p>
-
+          <p id="input">
             <label>
               Location:
               <select name="Location" value={this.state.Location} onChange={this.handleChange}>
@@ -206,14 +197,9 @@ class buildProfile extends React.Component {
                 <option value="Florham Park,New Jersey">Florham Park,New Jersey</option>
               </select>
             </label>
-
-
-
-
           </p>
 
-          <p>
-
+          <p id="input">
           <label>
             <p>How would you describe yourself?</p>
             Workout Level:
@@ -223,11 +209,9 @@ class buildProfile extends React.Component {
               <option value="Hard-core">Hard-core</option>
             </select>
           </label>
-
-
           </p>
 
-          <p>
+          <p id="input">
           <label>
           <p>Schedule</p>
           {Object.keys(this.state.Schedule[0]).map((item, i) => {
@@ -244,7 +228,7 @@ class buildProfile extends React.Component {
           </label>
           </p>
 
-          <input type="submit" value="Submit" />
+          <input className="button" type="submit" value="Submit" />
 
         </form>
       </div>
