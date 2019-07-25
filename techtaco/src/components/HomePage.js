@@ -102,6 +102,8 @@ class HomePage extends React.Component {
         console.log(data);
         this.props.history.push({pathname:'/matches',state:data});
       })
+    }).catch(function(error) {
+        console.error(error);
     });
 
     event.preventDefault();

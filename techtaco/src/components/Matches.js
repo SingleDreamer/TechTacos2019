@@ -62,7 +62,7 @@ class Matches extends Component {
 
 render() {
   return(
-    
+
     <div className="profile_body">
       <Link to="/">
         <button class="primary ghost">
@@ -99,15 +99,15 @@ render() {
       <div class="skills">
         <h6>Workout Type</h6>
         {/* <ul> */}
-          {/* {profile["Workout Type"].map(inner => (
-              <li>{inner}</li>
-          ))} */}
+          {profile["Workout Type"]["L"].map(inner => (
+              <li>{inner.S}</li>
+          ))}
           {/* </ul> */}
           </div>
           <div class="skills">
         <h6>Availability</h6>
 
-          
+
     {/* <p>{profile["Contact Information"]["L"][0]["M"].cell["S"]}</p> */}
     <ul>
     {Object.keys(this.state.schedule).map((item, i) => {
@@ -120,7 +120,7 @@ render() {
 
       })}
       </ul>
- 
+
       </div>
 
     </div>)
@@ -129,7 +129,7 @@ render() {
 
     </Table>
 
-    
+
     </div>
 
   )
