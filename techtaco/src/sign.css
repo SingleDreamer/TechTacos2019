@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:100,200,300,300i,400,400i,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+
+
 h1{
   font-variant: normal;
   font-size: 50px;
@@ -14,25 +19,44 @@ h2{
 }
 
 .buildProfile{
-  background-image: url("https://avante.biz/wp-content/uploads/Green-Images-Wallpapers/Green-Images-Wallpapers-014.jpg");
+  /* background-image: url("https://avante.biz/wp-content/uploads/Green-Images-Wallpapers/Green-Images-Wallpapers-014.jpg"); */
+  /* background-color: #4b314b;
+  background-color: #14473E; */
+  background: linear-gradient(to right, #5A9C71, #C9E691);
+  height: 350vh;
   font-size: 5em;
   font-style: bold;
 }
 
-#input{
+.signupmain {
+  height: 350vh;
+  background: #fff;
+  box-shadow: 0px 13px 40px -13px rgba(0,0,0,0.75);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.signupmain2 {
+  height: 200vh;
+  background: #fff;
+  width: 78%;
+  margin: 0 auto;
+}
+
+/* #input{
   text-align: center;
   font-size: 15px;
   margin-top: 5px;
   top: -100px;
   vertical-align: text-top;
 
-}
+} */
 
 #label{
   font-size: 40px;
 }
 
-.button {
+.signupbutton {
   display: inline-block;
   border-radius: 4px;
   background-color: green;
@@ -74,4 +98,33 @@ h2{
   margin: 20px;
   border-color: black;
 
+}
+
+input[type="textsignup"] {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #C9E691;
+  /* width: 30%; */
+  padding-bottom: 4px;
+  color: #fff !important;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 40px;
+  font-size: 18px;
+}
+
+select {
+  background-color: transparent;
+  border: 0;
+  border-bottom: solid 1px #C9E691;
+  /* width: 30%; */
+  padding-bottom: 4px;
+
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  font-size: 18px;
 }

@@ -166,6 +166,8 @@ class buildProfile extends React.Component {
   render() {
     return (
       <div className="buildProfile">
+      <div className="signupmain">
+        <div className="signupmain2">
         <h1>
           Sign Up
         </h1>
@@ -175,18 +177,20 @@ class buildProfile extends React.Component {
           </p>
           <p>
             Name:
-              <input onChange={this.handleChange} id='login_input' type="text" name="Name" placeholder="Name"/>
+              <input onChange={this.handleChange} id='login_input' type="textsignup" name="Name" placeholder="Name"/>
             Username:
-              <input onChange={this.handleChange} id='login_input' type="text" name="Username" placeholder="Username"/>
+              <input onChange={this.handleChange} id='login_input' type="textsignup" name="Username" placeholder="Username"/>
+          </p>
+          <p>
             Email:
-              <input onChange={this.handleChangeContact} id='login_input' type="text" name="email" placeholder="email"/>
+              <input onChange={this.handleChangeContact} id='login_input' type="textsignup" name="email" placeholder="email"/>
             Cell:
-              <input onChange={this.handleChangeContact} id='login_input' type="text" name="cell" placeholder="cell"/>
+              <input onChange={this.handleChangeContact} id='login_input' type="textsignup" name="cell" placeholder="cell"/>
           </p>
 
-          <p id="input">
+          <p>
             Workout Type(s):
-              <input onChange={this.handleChangeWorkout} id='login_input' type="text" name="workout" placeholder="Cardio, Yoga, etc"/>
+              <input onChange={this.handleChangeWorkout} id='login_input' type="textsignup" name="workout" placeholder="Cardio, Yoga, etc"/>
           </p>
           <p id="input">
             <label>
@@ -228,9 +232,11 @@ class buildProfile extends React.Component {
           </label>
           </p>
 
-          <input className="button" type="submit" value="Submit" />
+          <input className="signupbutton" type="submit" value="Submit" />
 
         </form>
+        </div>
+        </div>
       </div>
     );
   }
